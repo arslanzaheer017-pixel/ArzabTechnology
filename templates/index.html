@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARZAB AI | Ideas Into Innovation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div>
+                <h2>ARZAB<span> AI</span></h2>
+                <small>INTELLIGENCE SYSTEM</small>
+            </div>
+        </div>
+
+        <button class="new-chat" id="newChat">
+            <span>＋</span> New conversation
+        </button>
+
+        <div class="side-label">YOUR ASSISTANT</div>
+        <div class="side-item active">✦ &nbsp; ARZAB AI</div>
+
+        <div class="sidebar-bottom">
+            <div class="status-dot"></div>
+            Systems operational
+            <p>Powered by ARZAB Technologies</p>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <span class="mobile-brand">ARZAB AI</span>
+                <span class="top-label">PERSONAL AI ASSISTANT</span>
+            </div>
+            <div class="online"><span></span> Online</div>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome" id="welcome">
+                <div class="orb">✦</div>
+                <div class="eyebrow">WELCOME TO ARZAB AI</div>
+                <h1>Ideas into <span>Intelligence.</span></h1>
+                <p>Your intelligent assistant by ARZAB Technologies.<br>
+                What would you like to explore today?</p>
+
+                <div class="suggestions">
+                    <button data-prompt="Explain artificial intelligence in simple words.">
+                        <b>✧</b> Explain AI
+                    </button>
+                    <button data-prompt="Give me some creative business ideas.">
+                        <b>◈</b> Business ideas
+                    </button>
+                    <button data-prompt="Help me learn something new today.">
+                        <b>✦</b> Learn something
+                    </button>
+                </div>
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+        </section>
+
+        <footer class="composer-area">
+            <div class="composer">
+                <textarea id="messageInput"
+                    placeholder="Message ARZAB AI..."
+                    rows="1"></textarea>
+                <button id="sendButton" aria-label="Send message">➤</button>
+            </div>
+            <p class="disclaimer">
+                ARZAB AI can make mistakes. Verify important information.
+            </p>
+        </footer>
+    </main>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

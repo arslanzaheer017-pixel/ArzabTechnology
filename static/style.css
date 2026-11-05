@@ -1,0 +1,378 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #080910;
+    --panel: #0d0f19;
+    --border: rgba(255,255,255,.08);
+    --purple: #9672ff;
+    --cyan: #54d8f5;
+    --text: #f5f5ff;
+    --muted: #85869a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 255px;
+    background: #0b0c14;
+    border-right: 1px solid var(--border);
+    padding: 27px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 42px;
+}
+
+.brand-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    font-size: 23px;
+    font-weight: 800;
+    background: linear-gradient(135deg,#7652ec,#39c7e9);
+}
+
+.brand h2 {
+    margin: 0;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.brand h2 span {
+    color: #a78bfa;
+}
+
+.brand small {
+    color: var(--muted);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.new-chat {
+    border: 1px solid rgba(150,114,255,.35);
+    background: rgba(150,114,255,.1);
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.new-chat:hover {
+    background: rgba(150,114,255,.2);
+}
+
+.new-chat span {
+    font-size: 19px;
+    margin-right: 8px;
+}
+
+.side-label {
+    color: #65677c;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 38px 8px 15px;
+}
+
+.side-item {
+    padding: 13px;
+    color: #c8b9ff;
+    background: rgba(150,114,255,.1);
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    color: #b8b8c9;
+    font-size: 12px;
+    padding: 15px 5px;
+}
+
+.status-dot, .online span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4be3a0;
+    margin-right: 8px;
+    box-shadow: 0 0 10px #4be3a0;
+}
+
+.sidebar-bottom p {
+    color: #64667a;
+    font-size: 10px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.topbar {
+    height: 76px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+
+.top-label {
+    color: #999bb0;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.online {
+    font-size: 11px;
+    color: #a8b4ae;
+}
+
+.chat-area {
+    width: 100%;
+    max-width: 850px;
+    flex: 1;
+    margin: 0 auto;
+    padding: 35px 25px;
+    overflow-y: auto;
+}
+
+.welcome {
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.orb {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    font-size: 34px;
+    border-radius: 23px;
+    background: linear-gradient(135deg,#7148dc,#287caa);
+    box-shadow: 0 0 55px rgba(125,85,255,.3);
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    color: #a88dff;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.welcome h1 {
+    font-size: clamp(30px,5vw,48px);
+    margin: 15px 0;
+    letter-spacing: -2px;
+}
+
+.welcome h1 span {
+    background: linear-gradient(90deg,#aa8aff,#55d8f2);
+    color: transparent;
+    background-clip: text;
+}
+
+.welcome p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.suggestions button {
+    background: #111421;
+    border: 1px solid var(--border);
+    color: #d7d5e6;
+    border-radius: 10px;
+    padding: 12px 15px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.suggestions button:hover {
+    border-color: var(--purple);
+}
+
+.suggestions b {
+    color: #ad91ff;
+    margin-right: 6px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.message {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.avatar {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#7652ec,#39bddd);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.user .avatar {
+    background: #272b3b;
+}
+
+.message-content {
+    padding-top: 4px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.composer-area {
+    width: 100%;
+    max-width: 850px;
+    padding: 0 25px 23px;
+    margin: 0 auto;
+}
+
+.composer {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    background: #121522;
+    border: 1px solid rgba(150,114,255,.3);
+    border-radius: 17px;
+    padding: 13px;
+}
+
+.composer textarea {
+    flex: 1;
+    resize: none;
+    max-height: 130px;
+    outline: none;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.composer button {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg,#8058eb,#358fc9);
+}
+
+.composer button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.disclaimer {
+    text-align: center;
+    color: #65677a;
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+.typing {
+    color: #a88dff;
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.mobile-brand {
+    display: none;
+}
+
+@media(max-width:700px) {
+    .sidebar {
+        display: none;
+    }
+
+    .topbar {
+        height: 60px;
+        padding: 0 18px;
+    }
+
+    .mobile-brand {
+        display: inline;
+        font-weight: 700;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    .top-label {
+        font-size: 8px;
+    }
+
+    .chat-area {
+        padding: 20px 16px;
+    }
+
+    .welcome {
+        min-height: 400px;
+    }
+
+    .welcome h1 {
+        letter-spacing: -1px;
+    }
+
+    .suggestions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .composer-area {
+        padding: 0 13px 15px;
+    }
+}
